@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_KEY = "a39bb7ece9094a31d72aa8a843fb94cf";
+const API_KEY = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
 
 function Home() {
   const [city, setCity] = useState("");

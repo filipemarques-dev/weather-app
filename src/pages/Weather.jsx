@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const API_KEY = "a39bb7ece9094a31d72aa8a843fb94cf";
+const API_KEY = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
 
 function Weather() {
   const { city } = useParams();
