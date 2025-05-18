@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light theme (default) */
+:root {
+  --bg-color: #f0f2f5;
+  --text-color: #333;
+  --card-bg: #e9f0ff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --nav-bg: #f0a500;
+  --nav-link-color: #333;
+  --nav-link-hover: #fff3d0;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --button-bg: #f0a500;
+  --button-text: #fff;
+  --button-hover: #ffd700;
+}
+
+/* Dark theme */
+.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-bg: #333;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --nav-bg: #333;
+  --nav-link-color: #f0f0f0;
+  --nav-link-hover: #ffd700;
+  --input-bg: #2a2a2a;
+  --input-border: #555;
+  --button-bg: #333;
+  --button-text: #f0f0f0;
+  --button-hover: #555;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: gray;
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: color 0.3s;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+nav {
+  background: var(--nav-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: background-color 0.3s;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--nav-link-hover);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--button-bg);
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  color: var(--button-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.weather-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.weather-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.weather-card p {
+  font-size: 1.1rem;
+}
